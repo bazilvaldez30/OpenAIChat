@@ -19,7 +19,7 @@ jobs:
           TARGET: ${{ secrets.TARGET_DIR }}
 
       - name: Execute deployment script
-        uses: appleboy/ssh-action@v0.1.1
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
