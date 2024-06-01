@@ -49,7 +49,7 @@ const chatAi = async (req, res) => {
       res.status(200).json({
         message: completion.choices[0].message,
         audioUrl: speechFile,
-        testfield4: 'test4',
+        testfield5: 'test5',
       })
     }
   } catch (error) {
