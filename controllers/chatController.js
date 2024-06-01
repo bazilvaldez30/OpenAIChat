@@ -46,13 +46,11 @@ const chatAi = async (req, res) => {
       const buffer = Buffer.from(await mp3.arrayBuffer())
       await fs.promises.writeFile(speechFile, buffer)
 
-      res
-        .status(200)
-        .json({
-          message: completion.choices[0].message,
-          audioUrl: speechFile,
-          testfield3: 'test3',
-        })
+      res.status(200).json({
+        message: completion.choices[0].message,
+        audioUrl: speechFile,
+        testfield4: 'test4',
+      })
     }
   } catch (error) {
     console.error(
